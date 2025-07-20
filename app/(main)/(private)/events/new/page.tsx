@@ -9,7 +9,7 @@ export default function NewEventPage(){
         <Card className="max-w-md mx-auto border-8 border-blue-200 shadow-2xl shadow-accent-foreground">
           {/* Header section of the card displaying the title */}
           <CardHeader>
-            <CardTitle>New Event</CardTitle>
+            <CardTitle>Nuevo Evento</CardTitle>
           </CardHeader>
     
           {/* Content section of the card containing the event form */}

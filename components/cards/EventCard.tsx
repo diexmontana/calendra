@@ -56,7 +56,7 @@ type EventCardProps = {
             <Button 
             className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600"
             asChild>
-              <Link href={`/events/${id}/edit`}>Edit</Link>
+              <Link href={`/events/${id}/edit`}>Editar</Link>
             </Button>
           </CardFooter>
         </Card>

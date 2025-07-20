@@ -20,12 +20,12 @@ export default function LandingPage() {
 
              {/* Main Heading */}
             <h1 className="text-2xl font-black lg:text-3xl">
-            Your time, perfectly planned
+            Tu tiempo, perfectamente planificado
             </h1>
 
             {/* Subheading */}
             <p className="font-extralight">
-            Join millions of professionals who easily book meetings with the #1 scheduling tool
+            Únete a millones de profesionales que agendan reuniones fácilmente con la herramienta de programación #1
             </p>
 
              {/* Illustration below the text */}

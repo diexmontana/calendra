@@ -13,16 +13,16 @@ export const DAYS_OF_WEEK_IN_ORDER = [
     {
       imgURL: '/assets/events.svg',
       route: '/events',
-      label: 'My Events',
+      label: 'Mis Eventos',
     },
     {
       imgURL: '/assets/schedule.svg',
       route: '/schedule',
-      label: 'My Schedule',
+      label: 'Mi Agenda',
     },
     {
       imgURL: '/assets/public.svg',
       route: '/book',
-      label: 'Public Profile',
+      label: 'Perfil Público',
     },
   ] as const

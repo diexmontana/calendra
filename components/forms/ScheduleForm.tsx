@@ -64,14 +64,14 @@ export function ScheduleForm({
             async function onSubmit(values: z.infer<typeof scheduleFormSchema>) {
                 try {
                 await saveSchedule(values)
-                toast("Schedule saved successfully.", {
+                toast("Horario guardado correctamente.", {
                     duration: 5000,
                     className: '!rounded-3xl !py-8 !px-5 !justify-center !text-green-400 !font-black',
                 })
                 } catch (error: any) {
                 // Handle any unexpected errors that occur during the schedule saving process
                 form.setError("root", {
-                    message: `There was an error saving your schedule${error.message}`,
+                    message: `Hubo un error al guardar tu horario${error.message}`,
                 })
                 }
             }
@@ -98,7 +98,7 @@ export function ScheduleForm({
                         name="timezone"
                         render={({ field }) => (
                             <FormItem>
-                            <FormLabel>Timezone</FormLabel>
+                            <FormLabel>Zona horaria</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                 <SelectTrigger>
@@ -236,7 +236,7 @@ export function ScheduleForm({
                         className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600"
                         disabled={form.formState.isSubmitting}
                         type="submit">
-                            Save
+                            Guardar
                         </Button>
                     </div>
                 </form>

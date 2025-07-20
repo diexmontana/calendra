@@ -36,7 +36,7 @@ export default  function PublicEventCard({
                 <Button
                   className="cursor-pointer hover:scale-105 bg-blue-400 hover:bg-blue-600"
                  asChild>
-                  <Link href={`/book/${clerkUserId}/${id}`}>Select</Link>
+                  <Link href={`/book/${clerkUserId}/${id}`}>Seleccionar</Link>
                 </Button>
               </CardFooter>
             </Card>

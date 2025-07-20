@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Calendra",
-  description: "Calendra is a simple and efficient calendar app that helps you manage your events, meetings, and schedules with ease. Stay organized and never miss an important date again!",
+  description: "Calendra es una aplicación de calendario simple y eficiente que te ayuda a gestionar tus eventos, reuniones y horarios con facilidad. ¡Mantente organizado y no vuelvas a perder una fecha importante!",
 };
 
 export default function RootLayout({
@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="es">
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased animate-fade-in`}
         >

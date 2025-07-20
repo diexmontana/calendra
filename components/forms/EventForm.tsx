@@ -68,7 +68,7 @@ export default function EventForm({
         } catch (error: any) {
             // Handle any error that occurs during the action (e.g., network error)
           form.setError("root", {
-            message: `There was an error saving your event ${error.message}`,
+            message: `Hubo un error al eliminar tu evento ${error.message}`,
           })
         }
     }
@@ -93,12 +93,12 @@ export default function EventForm({
                 name="name"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Event Name</FormLabel>
+                    <FormLabel>Nombre del evento</FormLabel>
                     <FormControl>
                         <Input {...field} />
                     </FormControl>
                     <FormDescription>
-                        The name users will see when booking
+                        El nombre que los usuarios verán al reservar
                     </FormDescription>
                     <FormMessage />
                     </FormItem>
@@ -111,11 +111,11 @@ export default function EventForm({
                 name="durationInMinutes"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Duration</FormLabel>
+                    <FormLabel>Duración</FormLabel>
                     <FormControl>
                         <Input type="number" {...field} />
                     </FormControl>
-                    <FormDescription>In minutes</FormDescription>
+                    <FormDescription>En minutos</FormDescription>
                     <FormMessage />
                     </FormItem>
                 )}
@@ -127,12 +127,12 @@ export default function EventForm({
                 name="description"
                 render={({ field }) => (
                     <FormItem>
-                    <FormLabel>Description</FormLabel>
+                    <FormLabel>Descripción</FormLabel>
                     <FormControl>
                         <Textarea className="resize-none h-32" {...field} />
                     </FormControl>
                     <FormDescription>
-                        Optional description of the event
+                        Descripción opcional del evento
                     </FormDescription>
                     <FormMessage />
                     </FormItem>
@@ -152,10 +152,10 @@ export default function EventForm({
                             onCheckedChange={field.onChange}
                         />
                         </FormControl>
-                        <FormLabel>Active</FormLabel>
+                        <FormLabel>Activo</FormLabel>
                     </div>
                     <FormDescription>
-                        Inactive events will not be visible for users to book
+                        Los eventos inactivos no estarán disponibles para reserva
                     </FormDescription>
                     </FormItem>
                 )}
@@ -172,15 +172,14 @@ export default function EventForm({
                         variant="destructive"
                         disabled={isDeletePending || form.formState.isSubmitting}
                         >
-                        Delete
+                        Eliminar
                         </Button>
                     </AlertDialogTrigger>
                     <AlertDialogContent>
                         <AlertDialogHeader>
-                        <AlertDialogTitle>Are you sure?</AlertDialogTitle>
+                        <AlertDialogTitle>¿Estás seguro?</AlertDialogTitle>
                         <AlertDialogDescription>
-                            This action cannot be undone. This will permanently delete
-                            this event.
+                            Esta acción no se puede deshacer. Este evento se eliminará permanentemente.
                         </AlertDialogDescription>
                         </AlertDialogHeader>
                         <AlertDialogFooter>
@@ -198,7 +197,7 @@ export default function EventForm({
                                 } catch (error: any) {
                                     // If something goes wrong, show an error at the root level of the form
                                     form.setError("root", {
-                                    message: `There was an error deleting your event: ${error.message}`,
+                                    message: `Hubo un error al eliminar tu evento: ${error.message}`,
                                     })
                                 }
                                 })
@@ -206,7 +205,7 @@ export default function EventForm({
                             
                             
                         >
-                            Delete
+                            Eliminar
                         </AlertDialogAction>
                         </AlertDialogFooter>
                     </AlertDialogContent>
@@ -220,7 +219,7 @@ export default function EventForm({
                     asChild
                     variant="outline"
                 >
-                    <Link href="/events">Cancel</Link>
+                    <Link href="/events">Cancelar</Link>
                 </Button>
 
                 {/* Save Button - submits the form */}
@@ -229,7 +228,7 @@ export default function EventForm({
                     disabled={isDeletePending || form.formState.isSubmitting}
                     type="submit"
                 >
-                    Save
+                    Guardar
                 </Button>
                 </div>
             </form>
