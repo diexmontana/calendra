@@ -3,12 +3,16 @@ import { Button } from "@/components/ui/button";
 import { getEvents } from "@/server/actions/events";
 import { auth } from "@clerk/nextjs/server";
 import { CalendarPlus, CalendarRange } from "lucide-react";
+//Mejora
+import AccountStatus from "@/components/AccountStatus";
 import Link from "next/link";
 
 export default async function EventsPage() {
         // Get the authenticated user's ID
         const { userId, redirectToSignIn } = await auth()
         // Redirect to sign-in page if user is not authenticated
+        console.log("🆔 userId actual:", userId) 
+
         if (!userId) return redirectToSignIn()
 
         const events = await getEvents(userId)
@@ -35,8 +39,9 @@ export default async function EventsPage() {
                             </Link>
                         </Button>
                 </div>
+            
 
-                
+            <AccountStatus events={events} userId={userId} /> 
             {/* Show event cards if any exist, otherwise show empty state */}
             {events.length > 0 ? (
               <div className="grid gap-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 p-10">
