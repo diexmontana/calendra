@@ -31,7 +31,7 @@ export default function AccountStatus({ events, userId }: Props) {
   const inactive = total - active
 
   return (
-    <div className="w-full max-w-4xl border border-gray-300 bg-white p-6 rounded-2xl shadow-md mb-10">
+    <div className="w-full max-w-4xl border border-gray-300 bg-white p-6 rounded-2xl shadow-md mb-4">
       <h2 className="text-xl font-bold mb-4">📊 Panel de Estado de Cuenta</h2>
       <ul className="space-y-2 text-sm">
         <li>

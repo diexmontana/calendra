@@ -18,7 +18,7 @@ export default async function EventsPage() {
         const events = await getEvents(userId)
 
     return (
-        <section className="flex flex-col items-center gap-16 animate-fade-in">
+        <section className="flex flex-col items-center gap-8 animate-fade-in">
             {/* Page title and "New Event" button */}
             <div className="flex gap-4 items-baseline">
                         <h1 className="text-4xl xl:text-5xl font-black mb-6">
